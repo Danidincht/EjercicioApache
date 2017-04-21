@@ -11,12 +11,15 @@ Una vez instalado el servicio debemos crear los hosts virtuales para cada págin
 `
 sudo mkdir -p /var/www/gato.com/html
 `
+
 `
 sudo mkdir -p /var/www/mosquito.com/html
 `
+
 `
 sudo mkdir -p /var/www/escheriacholi.es/html
 `
+
 `
 sudo mkdir -p /var/www/chip555.org/html
 `
@@ -49,11 +52,17 @@ Debemos crear archivos de configuración para cada uno de los host virtuales
 
 `
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/gato.com.conf
+`
 
+`
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/mosquito.com.conf
+`
 
+`
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/escheriacoli.es.conf
+`
 
+`
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/chip555.org.conf
 `
 
@@ -64,21 +73,34 @@ gato.com.conf
 
 
 `
-
 <VirtualHost *:80>
+`
 
+`
     ServerAdmin admin@gato.com
+`
 
+`
     ServerName gato.com
+`
 
+`
     ServerAlias www.gato.com
+`
 
+`
     DocumentRoot /var/www/gato.com/html
+`
 
+`
     ErrorLog ${APACHE_LOG_DIR}/error.log
+`
 
+`
     CustomLog ${APACHE_LOG_DIR}/access.log combined
+`
 
+`
 </VirtualHost>
 `
 
