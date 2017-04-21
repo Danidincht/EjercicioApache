@@ -73,17 +73,21 @@ gato.com.conf
 
 
 `
-
 <VirtualHost *:80>
 
 ServerAdmin admin@gato.com
-    ServerName gato.com
-    ServerAlias www.gato.com
-    DocumentRoot /var/www/gato.com/html
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
 
+    ServerName gato.com
+    
+    ServerAlias www.gato.com
+    
+    DocumentRoot /var/www/gato.com/html
+    
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    
+</VirtualHost>
 `
 
 mosquito.com.conf
