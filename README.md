@@ -10,11 +10,14 @@ Una vez instalado el servicio debemos crear los hosts virtuales para cada págin
 
 `
 sudo mkdir -p /var/www/gato.com/html
-
+`
+`
 sudo mkdir -p /var/www/mosquito.com/html
-
+`
+`
 sudo mkdir -p /var/www/escheriacholi.es/html
-
+`
+`
 sudo mkdir -p /var/www/chip555.org/html
 `
 
