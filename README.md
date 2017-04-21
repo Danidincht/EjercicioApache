@@ -145,7 +145,9 @@ Los hosts escheriacoli.es y chip555.org necesitan de un archivo password:
 
 `
 sudo htpasswd -c /var/www/chip555.org/passwords user01
+`
 
+`
 sudo htpasswd -c /var/www/escheriacoli.es/passwords
 `
 
