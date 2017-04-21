@@ -80,117 +80,66 @@ gato.com.conf
 		DocumentRoot /var/www/gato.com/html
 		ErrorLog ${APACHE_LOG_DIR}/error.log
 		CustomLog ${APACHE_LOG_DIR}/access.log combined
-    
 	</VirtualHost>
 
 
 mosquito.com.conf
 
-`
-<VirtualHost *:80>
+	<VirtualHost *:80>
+	    ServerAdmin admin@mosquito.com
+	    ServerName mosquito.com
+	    ServerAlias www.mosquito.com
+	    DocumentRoot /var/www/mosquito.com/html
+	    ErrorLog ${APACHE_LOG_DIR}/error.log
+	    CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
 
-    ServerAdmin admin@mosquito.com
-
-    ServerName mosquito.com
-
-    ServerAlias www.mosquito.com
-
-    DocumentRoot /var/www/mosquito.com/html
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-</VirtualHost>
-`
 
 escheriacoli.es.conf
 
-`
-<VirtualHost *:80>
-
-    ServerAdmin admin@escheriacoli.es
-
-    ServerName escheriacoli.es
-
-    ServerAlias www.escheriacoli.es
-
-    DocumentRoot /var/www/escheriacoli.es/html
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-</VirtualHost>
-
-<Directory /var/www/escheriacoli.es/html>
-
-	AuthType Basic
-
-	AuthName "ACCESO RESTRINGIDO."
-	
-    AuthUserFile /var/www/escheriacoli.es/passwords
-
-	Require user usuario1
-
-</Directory>
-
-<Directory /var/www/escheriacoli.es/html>        
-
-	Options Indexes FollowSymLinks MultiViews
-
-	AllowOverride  none
-
-	Order Allow,deny
-
-	allow from all
-
-</Directory>
-`
+	<VirtualHost *:80>
+	    ServerAdmin admin@escheriacoli.es
+	    ServerName escheriacoli.es
+	    ServerAlias www.escheriacoli.es
+	    DocumentRoot /var/www/escheriacoli.es/html
+	    ErrorLog ${APACHE_LOG_DIR}/error.log
+	    CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
+	<Directory /var/www/escheriacoli.es/html>
+		AuthType Basic
+		AuthName "ACCESO RESTRINGIDO."
+		AuthUserFile /var/www/escheriacoli.es/passwords
+		Require user usuario1
+	</Directory>
+	<Directory /var/www/escheriacoli.es/html>        
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride  none
+		Order Allow,deny
+		allow from all
+	</Directory>
 
 chip555.org.conf
 
-`
-<VirtualHost *:80>
-
-    ServerAdmin admin@chip555.org
-
-    ServerName chip555.org
-
-    ServerAlias www.chip555.org
-
-    DocumentRoot /var/www/chip555.org/html
-
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-</VirtualHost>
-
-<Directory /var/www/chip555.org/html>
-
-	AuthType Basic
-
-	AuthName "ACCESO RESTRINGIDO."
-
-	AuthUserFile /var/www/chip555.org/passwords
-
-	Require valid-user
-
-</Directory>
-
-<Directory /var/www/chip555.org/html>        
-
-	Options Indexes FollowSymLinks MultiViews
-
-	AllowOverride  none
-
-	Order Allow,deny
-
-	allow from all
-
-</Directory>
-`
+	<VirtualHost *:80>
+	    ServerAdmin admin@chip555.org
+	    ServerName chip555.org
+	    ServerAlias www.chip555.org
+	    DocumentRoot /var/www/chip555.org/html
+	    ErrorLog ${APACHE_LOG_DIR}/error.log
+	    CustomLog ${APACHE_LOG_DIR}/access.log combined
+	</VirtualHost>
+	<Directory /var/www/chip555.org/html>
+		AuthType Basic
+		AuthName "ACCESO RESTRINGIDO."
+		AuthUserFile /var/www/chip555.org/passwords
+		Require valid-user
+	</Directory>
+	<Directory /var/www/chip555.org/html>        
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride  none
+		Order Allow,deny
+		allow from all
+	</Directory>
 
 Los hosts escheriacoli.es y chip555.org necesitan de un archivo password:
 
