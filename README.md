@@ -16,7 +16,6 @@ sudo mkdir -p /var/www/mosquito.com/html
 sudo mkdir -p /var/www/escheriacholi.es/html
 
 sudo mkdir -p /var/www/chip555.org/html
-
 `
 
 Concedemos permisos para usar esas carpetas a los usuarios
@@ -53,7 +52,6 @@ sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-availab
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/escheriacoli.es.conf
 
 sudo cp /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/chip555.org.conf
-
 `
 
 Y los configuramos
@@ -61,7 +59,9 @@ Y los configuramos
 
 gato.com.conf
 
+
 `
+
 <VirtualHost *:80>
 
     ServerAdmin admin@gato.com
